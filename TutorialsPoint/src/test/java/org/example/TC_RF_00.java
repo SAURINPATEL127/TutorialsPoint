@@ -3,6 +3,7 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -12,6 +13,8 @@ public class TC_RF_00 {
 
 @Test
     public void registerWithMandatoryFields() {
+
+        String expectedHeading = "'Your Account Has Been Created!'";
 
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // Global wait of 5 Seconds
@@ -28,6 +31,7 @@ public class TC_RF_00 {
         driver.findElement(By.xpath("//input[@name='agree']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
+        Assert.assertEquals(driver.findElement(By.xpath("//h1[normalize-space()=Your Account Has Been Created!]")),expectedHeading);
     }
 
     public String generateRandomEmail(){
