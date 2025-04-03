@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f0795ca-e4c2-499c-85ca-3249f3d231c2" name="Changes" comment="FirstCommit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TutorialsPoint/src/test/java/org/example/TC_RF_00.java" beforeDir="false" afterPath="$PROJECT_DIR$/TutorialsPoint/src/test/java/org/example/TC_RF_00.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,30 +23,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "searchQuery": "https://github.com/SAURINPATEL127/LiveSeleniumAutomationProject.git",
-      "state": "OPEN"
+      &quot;searchQuery&quot;: &quot;https://github.com/SAURINPATEL127/LiveSeleniumAutomationProject.git&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;
     },
     {
-      "searchQuery": "Live"
+      &quot;searchQuery&quot;: &quot;Live&quot;
     },
     {
-      "searchQuery": "LiveSelenium",
-      "state": "OPEN"
+      &quot;searchQuery&quot;: &quot;LiveSelenium&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {
-    "searchQuery": "LiveSelenium",
-    "state": "OPEN"
+  &quot;lastFilter&quot;: {
+    &quot;searchQuery&quot;: &quot;LiveSelenium&quot;,
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="06b1e417-2cc0-448a-b460-6391356fc2cd" />
-        <option name="url" value="https://github.com/SAURINPATEL127/SAURINPATEL127.git" />
+        <option name="url" value="https://github.com/SAURINPATEL127/TutorialsPoint.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -75,14 +76,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.TC_RF_00.executor": "Run",
     "TestNG.TC_RF_00.registerWithMandatoryFields.executor": "Run",
-    "git-widget-placeholder": "Cherry-picking in main",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/saurinpatel/IdeaProjects/Selenium Webdriver",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5137931",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
   }
 }]]></component>
   <component name="RunManager" selected="TestNG.TC_RF_00.registerWithMandatoryFields">
@@ -202,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743645012855</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FirstCommit">
+      <option name="closed" value="true" />
+      <created>1743647408313</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743647408313</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

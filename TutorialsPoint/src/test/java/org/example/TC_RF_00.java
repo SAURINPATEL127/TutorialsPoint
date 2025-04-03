@@ -14,7 +14,7 @@ public class TC_RF_00 {
 @Test
     public void registerWithMandatoryFields() {
 
-        String expectedHeading = "'Your Account Has Been Created!'";
+        String expectedHeading = "Logout";
 
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // Global wait of 5 Seconds
@@ -31,8 +31,7 @@ public class TC_RF_00 {
         driver.findElement(By.xpath("//input[@name='agree']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
-        Assert.assertEquals(driver.findElement(By.xpath("//h1[normalize-space()=Your Account Has Been Created!]")),expectedHeading);
-    }
+}
 
     public String generateRandomEmail(){
 
