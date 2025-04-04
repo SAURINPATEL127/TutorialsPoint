@@ -26,7 +26,7 @@ public class TC_RF_02 {
         driver.findElement(By.id("input-lastname")).sendKeys("Patel");
         driver.findElement(By.id("input-email")).sendKeys(generateRandomEmail());
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Global wait of 5 Seconds
-        driver.findElement(By.id("input-telephone")).sendKeys("12929232");
+        driver.findElement(By.id("input-telephone")).sendKeys(generateRandomPhoneNumbers());
         driver.findElement(By.id("input-password")).sendKeys("12345");
         driver.findElement(By.id("input-confirm")).sendKeys("12345");
         driver.findElement(By.xpath("//input[@name='newsletter'][@value='1']")).click();
