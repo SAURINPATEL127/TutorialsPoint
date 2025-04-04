@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.Date;
+import org.testng.annotations.Test;
+import java.util.Random;
 
 public class TC_RF_02 {
 
@@ -25,7 +27,7 @@ public class TC_RF_02 {
         driver.findElement(By.id("input-confirm")).sendKeys("12345");
         driver.findElement(By.xpath("//input[@name='newsletter'][@value='1']")).click();
         driver.findElement(By.xpath("//input[@type='checkbox'][@name='agree'][@value='1']")).click();
-
+        driver.findElement(By.xpath("input[@value='Continue']")).click();
 
     }
 
@@ -36,10 +38,7 @@ public class TC_RF_02 {
     }
 
     public String generateRandomPhoneNumbers(){
-        return new  new Random().ints(10, 0, 10).collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString());
+        return new Random().ints(10, 0, 10).collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString();
     }
 
-    public Strig generateRandomName(){
-
-    }
 }
