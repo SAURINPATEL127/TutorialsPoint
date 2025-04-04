@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.Date;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.Random;
 
@@ -19,15 +21,19 @@ public class TC_RF_02 {
         driver.get("https://www.tutorialsninja.com/demo/");
         driver.findElement(By.xpath("//span[text()='My Account']")).click();
         driver.findElement(By.linkText("Register")).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // Global wait of 5 Seconds
         driver.findElement(By.id("input-firstname")).sendKeys("SAURIN");
         driver.findElement(By.id("input-lastname")).sendKeys("Patel");
         driver.findElement(By.id("input-email")).sendKeys(generateRandomEmail());
-        driver.findElement(By.id("input-telephone")).sendKeys(generateRandomPhoneNumbers());
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Global wait of 5 Seconds
+        driver.findElement(By.id("input-telephone")).sendKeys("12929232");
         driver.findElement(By.id("input-password")).sendKeys("12345");
         driver.findElement(By.id("input-confirm")).sendKeys("12345");
         driver.findElement(By.xpath("//input[@name='newsletter'][@value='1']")).click();
         driver.findElement(By.xpath("//input[@type='checkbox'][@name='agree'][@value='1']")).click();
-        driver.findElement(By.xpath("input[@value='Continue']")).click();
+        driver.findElement(By.xpath("//input[@value='Continue']")).click();
+
+        Assert.assertTrue(driver.findElement(By.xpath("//a[text()='Logout']")).isDisplayed());
 
     }
 
