@@ -13,7 +13,7 @@ import java.util.Random;
 public class TC_RF_02 {
 
     @Test
-    public void testCase2()
+    public void testCase2() throws InterruptedException
     {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // Global wait of 5 Seconds
@@ -21,19 +21,17 @@ public class TC_RF_02 {
         driver.get("https://www.tutorialsninja.com/demo/");
         driver.findElement(By.xpath("//span[text()='My Account']")).click();
         driver.findElement(By.linkText("Register")).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // Global wait of 5 Seconds
         driver.findElement(By.id("input-firstname")).sendKeys("SAURIN");
+        Thread.sleep(4000);
         driver.findElement(By.id("input-lastname")).sendKeys("Patel");
         driver.findElement(By.id("input-email")).sendKeys(generateRandomEmail());
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Global wait of 5 Seconds
         driver.findElement(By.id("input-telephone")).sendKeys(generateRandomPhoneNumbers());
         driver.findElement(By.id("input-password")).sendKeys("12345");
         driver.findElement(By.id("input-confirm")).sendKeys("12345");
         driver.findElement(By.xpath("//input[@name='newsletter'][@value='1']")).click();
         driver.findElement(By.xpath("//input[@type='checkbox'][@name='agree'][@value='1']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
-
-        Assert.assertTrue(driver.findElement(By.xpath("//a[text()='Logout']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
 
     }
 
@@ -44,7 +42,12 @@ public class TC_RF_02 {
     }
 
     public String generateRandomPhoneNumbers(){
-        return new Random().ints(10, 0, 10).collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString();
+        Random random = new Random();
+        StringBuilder phoneNumber = new StringBuilder();
+        for (int i = 0; i < 10; i++) {
+            phoneNumber.append(random.nextInt(10)); // Append a random digit
+        }
+        return phoneNumber.toString();
     }
 
 }
