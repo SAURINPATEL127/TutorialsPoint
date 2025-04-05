@@ -32,6 +32,9 @@ public class TC_RF_02 {
         driver.findElement(By.xpath("//input[@type='checkbox'][@name='agree'][@value='1']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
         Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
+        driver.findElement(By.linkText("Continue")).click();
+        Assert.assertTrue(driver.findElement(By.linkText("Edit your account information")).isDisplayed());
+
 
     }
 
