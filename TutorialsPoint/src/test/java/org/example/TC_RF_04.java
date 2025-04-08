@@ -31,14 +31,13 @@ public class TC_RF_04{
         driver.findElement(By.id("input-telephone")).sendKeys(generateRandomPhoneNumbers());
         driver.findElement(By.id("input-password")).sendKeys("12345");
         driver.findElement(By.id("input-confirm")).sendKeys("12345");
-        driver.findElement(By.xpath("//input[@name='newsletter'][@value='1']")).click();
+        driver.findElement(By.xpath("//input[@name='newsletter'][@value='0']")).click();
         driver.findElement(By.xpath("//input[@type='checkbox'][@name='agree'][@value='1']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
         Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
         driver.findElement(By.linkText("Continue")).click();
         driver.findElement(By.linkText("Subscribe / unsubscribe to newsletter")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//input[@type='radio'][@value='0'][@checked='checked']")).isSelected());
-        System.out.print("No newsletter has been selected");
 
         cleanUp();
     }
