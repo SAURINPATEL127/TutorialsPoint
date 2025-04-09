@@ -20,8 +20,6 @@ public class TC_RF_03 {
         String expectedWarningForPassword= "Password must be between 4 and 20 characters!";
 
 
-
-
         driver.manage().window().maximize();
         driver.get("https://www.tutorialsninja.com/demo/");
         driver.findElement(By.xpath("//span[text()='My Account']")).click();

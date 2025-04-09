@@ -61,7 +61,7 @@ public class TC_RF_02 {
         return phoneNumber.toString();
     }
 
-    public static String generateRandomName() {
+    public  String generateRandomName() {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         Random random = new Random();
         StringBuilder randomName = new StringBuilder();
@@ -73,6 +73,26 @@ public class TC_RF_02 {
         }
 
         return randomName.toString();
+    }
+
+    public String generateRandomPassswords(){
+        // Define the characters allowed in the password
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=<>?";
+
+        // Generate a random password length between 4 and 20 characters
+        int length = 4 + new Random().nextInt(17); // 17 is the range (20 - 4 + 1)
+
+        // Create a StringBuilder to store the password
+        StringBuilder password = new StringBuilder();
+
+        // Generate the password by selecting random characters
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(characters.length());
+            password.append(characters.charAt(index));
+        }
+
+        return password.toString();
     }
 
     public void cleanUp(){
