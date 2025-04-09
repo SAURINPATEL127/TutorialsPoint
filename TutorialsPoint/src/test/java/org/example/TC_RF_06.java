@@ -12,11 +12,11 @@ public class TC_RF_06 {
 
     TC_RF_02 testCase2Object = new TC_RF_02();
     WebDriver driver = new ChromeDriver();
+
     @Test
     public void verifyRegisteredEmailIdError(){
 
         String expectedTextWarningMessageForRegisterdEmail = "Warning: E-Mail Address is already registered!";
-
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // Global wait of 5 Seconds
         driver.manage().window().maximize();
