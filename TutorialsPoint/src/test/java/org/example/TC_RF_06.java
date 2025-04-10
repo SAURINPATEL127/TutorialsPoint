@@ -33,7 +33,7 @@ public class TC_RF_06 {
         driver.findElement(By.xpath("//input[@type='checkbox'][@name='agree'][@value='1']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText().contains(expectedTextWarningMessageForRegisterdEmail));
+        Assert.assertEquals(driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText(),expectedTextWarningMessageForRegisterdEmail);
 
     }
 }
