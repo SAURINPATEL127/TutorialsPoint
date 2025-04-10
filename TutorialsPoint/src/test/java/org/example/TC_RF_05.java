@@ -40,6 +40,8 @@ public class TC_RF_05 {
         implicitWaitFor4Seconds();
         driver.findElement(By.xpath("//input[@value='Continue']")).submit();
         Assert.assertTrue(driver.findElement(By.className("text-danger")).isDisplayed());
+
+
     }
 
     public void implicitWaitFor4Seconds(){
